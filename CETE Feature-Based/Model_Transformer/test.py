@@ -1,0 +1,151 @@
+
+import torch
+import torch.nn as nn
+from torchtext import data
+import spacy
+import pandas as pd
+import numpy as np
+from sklearn.metrics import accuracy_score
+
+from scipy import spatial
+from sklearn.metrics.pairwise import cosine_similarity
+
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+
+# vectors
+import numpy as np
+x=np.random.rand(60,1)
+xx= np.squeeze(x, axis = 1)
+
+print(x)
+print(xx)
+
+xx=xx.tolist()
+print(xx)
+
+'''
+
+
+x = torch.randn(32,2)
+
+print(x)
+
+predicted = torch.max(x.cpu().data, 1)[1]
+print(predicted)
+
+a = np.array([500.0005259037134237587])
+b = np.array([5.3373973969428334])
+
+# manually compute cosine similarity
+dot = np.dot(a, b)
+norma = np.linalg.norm(a)
+normb = np.linalg.norm(b)
+cos = dot / (norma * normb)
+
+# use library, operates on sets of vectors
+aa = a.reshape(1, 1)
+ba = b.reshape(1, 1)
+cos_lib = cosine_similarity(aa, ba)
+
+print(
+    cos,
+    cos_lib[0][0]
+)
+
+
+'''
+
+'''
+import numpy as np
+x=np.random.rand(3,5,3)
+
+print(x)
+
+
+xx=x[:1,:3,:]
+
+yy=np.zeros((1,2,3))
+
+#yy=x[:,3:,:]
+
+
+z=np.concatenate((xx,yy),axis=1)
+
+print(z)
+
+'''
+
+'''
+Question = [0.0005259037134237587, 0.0006161991623230278, -0.000441926735220477, 0.00023349127150140703, -0.00022218863887246698, -0.00020559232507366687, -0.00030536335543729365, -0.0004559644148685038, -0.0005555280367843807, -0.0005481719854287803, -0.0004468941770028323, -0.0003165467642247677, -0.00022572517627850175, -0.00026030224398709834, -0.0003966140793636441, -0.0005340067436918616, -0.0006258487701416016, -0.0006679900689050555, -0.0005561892176046968, -0.0004732513625640422, -0.00043623606325127184, -0.0004072698066011071, -0.0003713608020916581, -0.000308596296235919, -0.0002081076381728053, -0.00011787891708081588, -7.756550985504873e-06, 0.00011763573274947703, 0.00026371877174824476, 0.00037933350540697575, 0.00048683484783396125, 0.0005455493810586631, 0.0005029932945035398, 0.00043106399243697524, 0.00038869859417900443, 0.00042221706826239824, 0.000481904367916286, 0.0005186319467611611, 0.0005151367513462901, 0.0004962238017469645, 0.000517042470164597, 0.0005748764961026609, 0.0006418864359147847, 0.0007038799813017249, 0.0007023453945294023, 0.0006014808313921094, 0.0004530151782091707, 0.0004313945828471333, 0.0005077203386463225, 0.0006168206455186009]
+Answer = [-0.0007407172815874219, 0.0003912162792403251, 0.000783729599788785, 0.0005963357398286462, 0.0003820427227765322, 0.00016249656619038433, 0.00017274539277423173, 0.000946180836763233, 0.0002916924131568521, -0.00038191478233784437, -5.3373973969428334e-06, -0.00035996915539726615, -0.0002821063972078264, -0.00024768829462118447, -0.00030805906862951815, -0.0004250049823895097, -0.0005145525792613626, -0.0005189307848922908, -0.00045824371045455337, -0.00039178848965093493, -0.0003628349513746798, -0.00037580489879474044, -0.00038543384289368987, -0.0003000291180796921, -0.00017051061149686575, -3.2140414987225085e-05, 7.280190766323358e-05, 0.00016395568673033267, 0.00020775476878043264, 0.00026425361284054816, 0.0003404776216484606, 0.00042201997712254524, 0.00046484629274345934, 0.0004480171191971749, 0.0003900114679709077, 0.00033688865369185805, 0.0003283977566752583, 0.00037086804513819516, 0.00043829443166032434, 0.00048064233851619065, 0.00047680697753094137, 0.0004650719929486513, 0.00046278160880319774, 0.00047989209997467697, 0.0004961331724189222, 0.000502545852214098, 0.0004694652743637562, 0.00045421600225381553, 0.0005006440333090723, 0.000588912982493639]
+x=[]
+for i in range(0,5):
+    res=[]
+    for j in range(0,12):
+        #Answer[j] = '{:.16f}'.format(Answer[j])
+        dist=abs(Question[i]-Answer[j])
+        res.append(dist)
+    x.append(res)
+#Answer[10]='{:.16f}'.format(Answer[10])
+for i in x:
+    print(i)
+'''
+#print(x)
+#print(cosine_similarity(Question, Answer))
+
+'''
+glove_file = ('../WordVec/paragram_300.txt')
+tmp_file = get_tmpfile("test_word2vec.txt")
+_ = glove2word2vec(glove_file, tmp_file)
+model = KeyedVectors.load_word2vec_format(tmp_file,encoding = "ISO-8859-1")
+model.save("paragram_300.txt")
+print(model.vectors)
+'''
+'''
+x = torch.randn(5, 2, 3)
+print(x)
+y=torch.mean(x,2)
+print(y)
+y=torch.mean(y,1,keepdim=True)
+
+
+xx = torch.randn(5, 2, 3)
+print(xx)
+yy=torch.mean(xx,2)
+print(yy)
+yy=torch.mean(yy,1,keepdim=True)
+
+print("result")
+
+print(y)
+print(yy)
+
+#predicted = torch.max(x.cpu().data, 1)[0]
+#print(predicted)
+cos = nn.CosineSimilarity(dim=1, eps=1e-8)
+output = cos(y, yy)
+print(output)
+
+'''
+'''
+m = nn.MaxPool2d((4,1), stride=1)
+# pool of non-square window
+#m = nn.MaxPool3d((3, 2, 2), stride=(2, 1, 2))
+input = torch.randn(5, 4, 4)
+output = m(input)
+print(input.size(0))
+#b=output.view(4,-1)
+#print(b)
+'''
+'''
+tensor([[[-1.1660, -0.8757],
+         [-0.7303, -0.4677]],
+
+        [[-0.1674,  0.7608],
+         [-0.9821,  0.7488]]])
+tensor([[-0.9482, -0.6717],
+        [-0.5748,  0.7548]])
+tensor([[-0.7303, -0.4677],
+        [-0.1674,  0.7608]])
+'''
