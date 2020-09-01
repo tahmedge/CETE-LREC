@@ -1,4 +1,8 @@
-# 👾 PyTorch-Transformers
+# This code is implemented based on this repository: https://github.com/huggingface/transformers
+
+# To run different models, see the run.txt file for instruction.
+
+# Details on installing HuggingFace-Transformers
 
 [![CircleCI](https://circleci.com/gh/huggingface/pytorch-transformers.svg?style=svg)](https://circleci.com/gh/huggingface/pytorch-transformers)
 
