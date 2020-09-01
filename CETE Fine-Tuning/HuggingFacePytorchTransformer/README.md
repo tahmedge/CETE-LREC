@@ -2,8 +2,6 @@
 
 ## To run different models, see the run.txt file for instruction.
 
-## Details on installing HuggingFace-Transformers in PyTorch given below
-
 PyTorch-Transformers (formerly known as `pytorch-pretrained-bert`) is a library of state-of-the-art pre-trained models for Natural Language Processing (NLP).
 
 The library currently contains PyTorch implementations, pre-trained model weights, usage scripts and conversion utilities for the following models:
