@@ -1,4 +1,4 @@
-## This code is implemented based on this repository: https://github.com/huggingface/transformers
+### The models are implemented using the Huggingface Transformer: https://github.com/huggingface/transformers
 
-## To run different models, see the run.txt file for instruction.
+### To run different models, see the run.txt file for instruction.
 
