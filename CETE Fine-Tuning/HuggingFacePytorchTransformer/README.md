@@ -16,7 +16,7 @@ Thus, for the dataset named "MYDATASET", each filename inside the folder should 
 - validation file: "mydataset_valid.tsv"
 - test file: "test_file.tsv"
 
-# Now go to the "utils_glue.py" file inside the "examples" folder and do the following:
+### Now go to the "utils_glue.py" file inside the "examples" folder and do the following:
 
 - create a class named "MydatasetProcessor" (i.e., suppose that your dataset name is "MYDATASET"). You can check the classes such as TreccProcessor, TrecrProcessor, WikiProcdessor, YahooProcessor, Semeval201xProcessor etc. inside the "utils_glue.py" file to know more about how to write this class since the code inside your created class should be same as those classes. 
 
