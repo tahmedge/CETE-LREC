@@ -4,3 +4,8 @@
 
 ### To run different models, see the run.txt file for instruction.
 
+## To run the models in new datasets: 
+
+# Create a folder with your datasets name in uppercase without any spaces. (i.e., MYDATASET)
+
+# Put "training", "test", and "validation" files inside the folder in .tsv format where the prefix for each file should be the filename in lowercase format followed by "\_filecategory.tsv". (i.e., for the dataset named "MYDATASET", each filename inside the folder should be, training file: "mydataset_train.tsv", validation file: "mydataset_valid.tsv", test file: "test_file.tsv".   
