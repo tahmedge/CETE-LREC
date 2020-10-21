@@ -16,4 +16,16 @@ Thus, for the dataset named "MYDATASET", each filename inside the folder should 
 - validation file: "mydataset_valid.tsv"
 - test file: "test_file.tsv"
 
+# Now go to the "utils_glue.py" file inside the "examples" folder and do the following:
 
+- create a class named "MydatasetProcessor" (i.e., suppose that your dataset name is "MYDATASET"). You can check the classes such as TreccProcessor, TrecrProcessor, WikiProcdessor, YahooProcessor, Semeval201xProcessor etc. inside the "utils_glue.py" file to know more about how to write this class since the code inside your created class should be same as those classes. 
+
+- Add codes inside the function "compute metrics" with your task_name == "mydataset" (i.e., your dataset name should be in lowercase).  See codes for treec, trecr, wiki, yahoo, semeval201x etc. to know more about how to write the codes inside this function since the code for your dataset should be same as those. 
+
+- Add codes inside the dictionary "processors" in the following format: "mydataset": MydatasetProcessor
+
+- Add codes inside the dictionary "output_modes" in the following format: "mydataset": "classification"
+
+- Add codes inside the dictionary "GLUE_TASKS_NUM_LABELS" in the following format: "mydataset": 2
+
+Note that you can edit the above two lines with other values based on your problems requirement. 
