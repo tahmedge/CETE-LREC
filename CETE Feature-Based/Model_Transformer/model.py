@@ -83,20 +83,20 @@ class Transformer(nn.Module):
 
         output=self.cos(final_out1 , final_out2)
 
-        # for Ablation studies, uncomment the following
+        # for Ablation studies, uncomment the following (line 88 to 99)
 
-        final_feature_map1 = torch.mean(embedded_sents1, 1)
-        final_feature_map2 = torch.mean(embedded_sents2, 1)
-        final_out1 = final_feature_map1
-        final_out2 = final_feature_map2
-        comp = self.cos(final_out1, final_out2)
+        #final_feature_map1 = torch.mean(embedded_sents1, 1)
+        #final_feature_map2 = torch.mean(embedded_sents2, 1)
+        #final_out1 = final_feature_map1
+        #final_out2 = final_feature_map2
+        #comp = self.cos(final_out1, final_out2)
 
-        j=0
+        #j=0
         #print(output.size(),"output")
         #print(comp.size(),"comp")
-        for i in comp:
-            output[j] = comp[j]
-            j = j + 1
+        #for i in comp:
+        #    output[j] = comp[j]
+        #    j = j + 1
 
 
         ''' '''
