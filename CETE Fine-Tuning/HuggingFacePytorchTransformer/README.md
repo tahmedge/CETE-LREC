@@ -28,4 +28,4 @@ Thus, for the dataset named "MYDATASET", each filename inside the folder should 
 
 - Add codes inside the dictionary "GLUE_TASKS_NUM_LABELS" in the following format: "mydataset": 2
 
-Note that you can edit the above two lines with other values based on your problems requirement. 
+Note that you can edit the above two lines with other values based on your problem's requirement. 
